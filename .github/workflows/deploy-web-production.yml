@@ -64,11 +64,11 @@ jobs:
         with:
           type: 'zip'
           filename: 'build.zip'
-          exclusions: '*.git* /*node_modules/* .editorconfig /*.yarn/*'
+          # exclusions: '*.git* /*node_modules/* .editorconfig /*.yarn/*'
 
       - name: Upload Build and Running Script
         run: |
           curl -X POST https://action.artamananda.my.id/upload \
             -F "file=@build.zip" \
             -F "target=/home/arta/artamananda-my-id" \
-            -F "script=cd /home/arta/artamananda-my-id && yarn install && pm2 delete artamananda-my-id && pm2 start"
+            -F "script=cd /home/arta/artamananda-my-id && pm2 delete artamananda-my-id && pm2 start"
