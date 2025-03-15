@@ -28,7 +28,6 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 22
-          cache: 'yarn'
 
       # - name: 'Automated Version Bump'
       #   uses: 'phips28/gh-action-bump-version@master'
@@ -65,7 +64,7 @@ jobs:
         with:
           type: 'zip'
           filename: 'build.zip'
-          exclusions: '*.git* /*node_modules/* .editorconfig'
+          exclusions: '*.git* /*node_modules/* .editorconfig /*.yarn/*'
 
       - name: Upload Build and Running Script
         run: |
