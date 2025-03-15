@@ -13,7 +13,7 @@ concurrency:
 
 jobs:
   deploy:
-    name: Deploy Web Development
+    name: Deploy Web Production
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -21,8 +21,8 @@ jobs:
       - name: Pull latest changes
         run: |
           git fetch origin
-          git checkout development
-          git pull origin development
+          git checkout main
+          git pull origin main
 
       - name: 'Setup Node.js'
         uses: actions/setup-node@v3
@@ -38,7 +38,7 @@ jobs:
           major-wording: 'MAJOR,cut-major'
           patch-wording: 'patch,fixes,fix,adjust'
           rc-wording: 'RELEASE,alpha'
-          target-branch: 'development'
+          target-branch: 'main'
           commit-message: 'CI: bumps version to {{version}} [skip ci]'
 
       - name: yarn install
