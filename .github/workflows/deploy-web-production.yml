@@ -1,0 +1,74 @@
+name: Deploy Web Production
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions: write-all
+
+concurrency:
+  group: '${{ github.workflow }} @ ${{ github.event.pull_request.head.label || github.head_ref || github.ref }}'
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    name: Deploy Web Development
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Pull latest changes
+        run: |
+          git fetch origin
+          git checkout development
+          git pull origin development
+
+      - name: 'Setup Node.js'
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
+
+      - name: 'Automated Version Bump'
+        uses: 'phips28/gh-action-bump-version@master'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          minor-wording: 'add,Adds,new,feat,feature'
+          major-wording: 'MAJOR,cut-major'
+          patch-wording: 'patch,fixes,fix,adjust'
+          rc-wording: 'RELEASE,alpha'
+          target-branch: 'development'
+          commit-message: 'CI: bumps version to {{version}} [skip ci]'
+
+      - name: yarn install
+        run: yarn install
+
+      - uses: culshaw/read-package-node-version-actions@v1
+        id: package-json
+
+      - name: Show version number
+        run: echo "${{ steps.package-json.outputs.version }}"
+
+      - name: 'cat package.json'
+        run: cat ./package.json
+
+      - name: Build
+        env:
+          CI: false
+        run: |
+          yarn build
+
+      - name: Zip Build
+        uses: thedoctor0/zip-release@0.7.5
+        with:
+          type: 'zip'
+          filename: 'build.zip'
+          exclusions: '*.git* /*node_modules/* .editorconfig'
+
+      - name: Upload Build and Running Script
+        run: |
+          curl -X POST https://action.artamananda.my.id/upload \
+            -F "file=@build.zip" \
+            -F "target=/home/arta/artamananda-my-id" \
+            -F "script=cd /home/arta/artamananda-my-id && yarn install && pm2 delete artamananda-my-id && pm2 start"
