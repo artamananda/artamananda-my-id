@@ -3,7 +3,7 @@ const siteMetadata = {
   title: "Arta's Blog",
   author: 'Artamananda',
   headerTitle: "Arta's Blog",
-  description: 'A blog created with Next.js and Tailwind.css',
+  description: 'Random thoughts and ideas from a software craftsman',
   language: 'en-us',
   theme: 'system', // system, dark or light
   siteUrl: 'https://artamananda.my.id',
