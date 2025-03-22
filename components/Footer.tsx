@@ -26,8 +26,11 @@ export default function Footer() {
           <div>{` • `}</div>
           <Link href="/">{siteMetadata.title}</Link>
           <div>{siteMetadata.version ? `v${siteMetadata.version}` : ''}</div>
-          <div>{` • `}</div>
-          <div>{'Self Hosting Using Armbian'}</div>
+        </div>
+        <div className="mb-2 flex space-x-2 text-sm text-gray-500 dark:text-gray-400">
+          <Link href="https://uptime.artamananda.my.id/status/arta-prod">
+            {'Self Hosted with Indihome & Armbian❤️'}
+          </Link>
         </div>
         <div className="mb-8 text-sm text-gray-500 dark:text-gray-400">
           <Link href="https://github.com/timlrx/tailwind-nextjs-starter-blog">
