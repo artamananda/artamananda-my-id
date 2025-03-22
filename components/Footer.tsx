@@ -25,9 +25,14 @@ export default function Footer() {
           <div>{`© ${new Date().getFullYear()}`}</div>
           <div>{` • `}</div>
           <Link href="/">{siteMetadata.title}</Link>
+          <div>{siteMetadata.version ? `v${siteMetadata.version}` : ''}</div>
+          <div>{` • `}</div>
+          <div>{'Self Hosting Using Armbian'}</div>
         </div>
         <div className="mb-8 text-sm text-gray-500 dark:text-gray-400">
-          <Link href="https://github.com/artamananda/artamananda-my-id">Tailwind Nextjs Theme</Link>
+          <Link href="https://github.com/timlrx/tailwind-nextjs-starter-blog">
+            Tailwind Nextjs Theme
+          </Link>
         </div>
       </div>
     </footer>

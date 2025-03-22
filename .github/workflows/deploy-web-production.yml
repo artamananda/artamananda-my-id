@@ -29,17 +29,17 @@ jobs:
         with:
           node-version: 22
 
-      # - name: 'Automated Version Bump'
-      #   uses: 'phips28/gh-action-bump-version@master'
-      #   env:
-      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      #   with:
-      #     minor-wording: 'add,Adds,new,feat,feature'
-      #     major-wording: 'MAJOR,cut-major'
-      #     patch-wording: 'patch,fixes,fix,adjust'
-      #     rc-wording: 'RELEASE,alpha'
-      #     target-branch: 'main'
-      #     commit-message: 'CI: bumps version to {{version}} [skip ci]'
+      - name: 'Automated Version Bump'
+        uses: 'phips28/gh-action-bump-version@master'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          minor-wording: 'add,Adds,new,feat,feature'
+          major-wording: 'MAJOR,cut-major'
+          patch-wording: 'patch,fixes,fix,adjust'
+          rc-wording: 'RELEASE,alpha'
+          target-branch: 'main'
+          commit-message: 'CI: bumps version to {{version}} [skip ci]'
 
       - name: yarn install
         run: yarn install
@@ -52,6 +52,12 @@ jobs:
 
       - name: 'cat package.json'
         run: cat ./package.json
+
+      - name: 'Create .env file'
+        run: |
+          touch .env
+          echo APP_VERSION=${{ steps.package-json.outputs.version }} >> .env
+          cat .env
 
       - name: Build
         env:
