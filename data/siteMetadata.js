@@ -10,6 +10,7 @@ const siteMetadata = {
   siteRepo: 'https://github.com/artamananda/artamananda-my-id',
   siteLogo: `${process.env.BASE_PATH || ''}/static/images/logo.png`,
   socialBanner: `${process.env.BASE_PATH || ''}/static/images/twitter-card.png`,
+  version: `${process.env.APP_VERSION}`,
   // mastodon: 'https://mastodon.social/@mastodonuser',
   email: 'artamananda@gmail.com',
   github: 'https://github.com/artamananda',
