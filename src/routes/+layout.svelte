@@ -60,20 +60,20 @@
     </main>
     <footer>
       <div
-        class="flex items-center justify-center w-full max-w-2xl py-4 mx-auto text-xs text-zinc-500"
+        class="text-center w-full max-w-2xl py-4 mx-auto text-xs text-zinc-500"
       >
         <span
-          >{`Artamananda • © ${year} • Arta's Blog v${
+          >{`Made with Svelte + Vite © ${year} Arta's Blog v${
             import.meta.env.VITE_APP_VERSION
-          } Self Hosted with Indihome &`}
+          } Self Hosted with `}
         </span>
         <a
-          class="ml-1 font-semibold text-teal-500 dark:text-teal-400"
+          class="font-semibold text-teal-500 dark:text-teal-400"
           href="https://uptime.artamananda.my.id"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Armbian ❤️
+          Indihome & Armbian ❤️
         </a>
       </div>
       <footer />
