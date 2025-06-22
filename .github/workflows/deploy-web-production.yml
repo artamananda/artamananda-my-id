@@ -59,11 +59,11 @@ jobs:
           echo VITE_APP_VERSION=${{ steps.package-json.outputs.version }} >> .env
           cat .env
 
-      - name: Build
-        env:
-          CI: false
-        run: |
-          yarn build
+      # - name: Build
+      #   env:
+      #     CI: false
+      #   run: |
+      #     yarn build
 
       - name: Zip Build
         uses: thedoctor0/zip-release@0.7.5
@@ -77,4 +77,4 @@ jobs:
           curl -X POST https://action.artamananda.my.id/upload \
             -F "file=@build.zip" \
             -F "target=/home/arta/artamananda-my-id" \
-            -F "script=cd /home/arta/artamananda-my-id && yarn install && pm2 delete artamananda-my-id && pm2 start && rm build.zip"
+            -F "script=cd /home/arta/artamananda-my-id && yarn install && yarn build && pm2 delete artamananda-my-id && pm2 start && rm build.zip"
