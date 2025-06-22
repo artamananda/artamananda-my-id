@@ -56,11 +56,7 @@ jobs:
       - name: 'Create .env file'
         run: |
           touch .env
-          echo APP_VERSION=${{ steps.package-json.outputs.version }} >> .env
-          echo NEXT_PUBLIC_GISCUS_REPO="artamananda/artamananda-my-id" >> .env
-          echo NEXT_PUBLIC_GISCUS_REPOSITORY_ID="R_kgDOOJGR_Q" >> .env
-          echo NEXT_PUBLIC_GISCUS_CATEGORY="General" >> .env
-          echo NEXT_PUBLIC_GISCUS_CATEGORY_ID="DIC_kwDOOJGR_c4CphXI" >> .env
+          echo VITE_APP_VERSION=${{ steps.package-json.outputs.version }} >> .env
           cat .env
 
       - name: Build
