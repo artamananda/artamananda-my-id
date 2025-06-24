@@ -8,7 +8,7 @@ export default defineConfig({
     fs: {
       allow: ['./']
     },
-    port: 3000,
+    port: 3000
     // allowedHosts: ['artamananda.my.id'],
   }
 })

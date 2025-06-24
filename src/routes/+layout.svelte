@@ -59,20 +59,13 @@
       <slot />
     </main>
     <footer>
-      <div
-        class="text-center w-full max-w-2xl py-4 mx-auto text-xs text-zinc-500"
-      >
+      <div class="text-center w-full max-w-2xl py-4 mx-auto text-xs text-zinc-500">
         <span
           >{`Made with Svelte + Vite © ${year} Arta's Blog v${
             import.meta.env.VITE_APP_VERSION
           } Self Hosted with `}
         </span>
-        <a
-          class="font-semibold text-teal-500 dark:text-teal-400"
-          href="https://uptime.artamananda.my.id"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <a class="font-semibold text-teal-500 dark:text-teal-400" href="/server-monitoring">
           Indihome & Armbian ❤️
         </a>
       </div>
