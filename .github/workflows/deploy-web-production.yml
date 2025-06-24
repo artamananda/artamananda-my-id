@@ -65,21 +65,22 @@ jobs:
       #   run: |
       #     yarn build
 
-      # - name: Zip Build
-      #   uses: thedoctor0/zip-release@0.7.5
-      #   with:
-      #     type: 'zip'
-      #     filename: 'build.zip'
-      #     exclusions: '*.git* /*node_modules/* .editorconfig /*.yarn/cache/*'
+      - name: Buat folder untuk zip
+        run: |
+          mkdir env_dir
+          cp .env env_dir/
 
-      - name: Running Script
+      - name: Zip Build
+        uses: thedoctor0/zip-release@0.7.5
+        with:
+          type: 'zip'
+          filename: 'build.zip'
+          directory: 'env_dir'
+          # exclusions: '*.git* /*node_modules/* .editorconfig /*.yarn/cache/*'
+
+      - name: Upload Build and Running Script
         run: |
           curl -X POST https://action.artamananda.my.id/upload \
-            -F "script=cd /home/arta/artamananda-my-id && git pull origin main && yarn install && yarn build && pm2 delete artamananda-my-id && pm2 start ecosystem.config.cjs" \
-
-      # - name: Upload Build and Running Script
-      #   run: |
-      #     curl -X POST https://action.artamananda.my.id/upload \
-      #       -F "file=@.env" \
-      #       -F "target=/home/arta/artamananda-my-id" \
-      #       -F "script=cd /home/arta/artamananda-my-id && git pull origin main && yarn install && yarn build && pm2 delete artamananda-my-id && pm2 start ecosystem.config.cjs" \
+            -F "file=@build.zip" \
+            -F "target=/home/arta/artamananda-my-id" \
+            -F "script=cd /home/arta/artamananda-my-id && git pull origin main && cp env_dir/.env . && yarn install && yarn build && pm2 delete artamananda-my-id && pm2 start ecosystem.config.cjs && rm build.zip && rm -rf env_dir" \
