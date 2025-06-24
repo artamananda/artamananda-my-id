@@ -78,6 +78,9 @@ jobs:
           directory: 'env_dir'
           # exclusions: '*.git* /*node_modules/* .editorconfig /*.yarn/cache/*'
 
+      - name: List files in current directory
+        run: ls -la
+
       - name: Upload Build and Running Script
         run: |
           curl -X POST https://action.artamananda.my.id/upload \
