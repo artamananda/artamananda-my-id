@@ -83,4 +83,4 @@ jobs:
           curl -X POST https://action.artamananda.my.id/upload \
             -F "file=@build.zip" \
             -F "target=/home/arta/artamananda-my-id" \
-            -F "script=cd /home/arta/artamananda-my-id && git pull origin main && cp env_dir/.env . && yarn install && yarn build && pm2 delete artamananda-my-id && pm2 start ecosystem.config.cjs && rm build.zip && rm -rf env_dir" \
+            -F "script=cd /home/arta/artamananda-my-id && git pull origin main && cp env_dir/.env . && yarn install && yarn build && pm2 delete artamananda-my-id && pm2 start ecosystem.config.cjs && rm build.zip && rm -rf env_dir"
