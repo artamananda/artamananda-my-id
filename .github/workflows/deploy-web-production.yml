@@ -65,7 +65,7 @@ jobs:
       #   run: |
       #     yarn build
 
-      - name: Buat folder untuk zip
+      - name: Create Environment Directory
         run: |
           mkdir env_dir
           cp .env env_dir/
@@ -77,9 +77,6 @@ jobs:
           filename: 'build.zip'
           directory: 'env_dir'
           # exclusions: '*.git* /*node_modules/* .editorconfig /*.yarn/cache/*'
-
-      - name: List files in current directory
-        run: cd env_dir && ls -la
 
       - name: Upload Build and Running Script
         run: |
