@@ -79,10 +79,11 @@ jobs:
           # exclusions: '*.git* /*node_modules/* .editorconfig /*.yarn/cache/*'
 
       - name: List files in current directory
-        run: ls -la
+        run: cd env_dir && ls -la
 
       - name: Upload Build and Running Script
         run: |
+          cd env_dir &&
           curl -X POST https://action.artamananda.my.id/upload \
             -F "file=@build.zip" \
             -F "target=/home/arta/artamananda-my-id" \
