@@ -1,6 +1,6 @@
 {
 	"name": "artamananda-blog",
-	"version": "3.0.9",
+	"version": "3.0.10",
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build",
