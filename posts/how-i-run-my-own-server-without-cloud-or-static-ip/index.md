@@ -1,11 +1,9 @@
 ---
-title: How My Server Works?
-date: 2025-06-30
+title: How I Run My Own Server Without the Cloud or a Static Public IP
+date: 2025-07-01
 ---
 
-# How My Server Works Without Cloud and Static Public IP
-
-Deploying a server used to be a straightforward decision for me: pick a hosting provider like Vercel, Fly.io, or a VPS service, and get going. But as I dove deeper into my projects, I realized there were limitations and costs that made me rethink this approach. In this post, I want to share how I ended up running my own server without relying on cloud providers or a static public IP address.
+Deploying a server used to be a straightforward decision for me: pick a hosting provider like [Vercel](https://vercel.com), [Fly.io](https://fly.io), or a VPS service, and get going. But as I dove deeper into my projects, I realized there were limitations and costs that made me rethink this approach. In this post, I want to share how I ended up running my own server without relying on cloud providers or a static public IP address.
 
 ---
 
