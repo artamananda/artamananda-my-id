@@ -47,7 +47,7 @@
   <div class="info-box-item">
     <div class="label">{`CPU Load: ${cpuLoad}% of (ARM64 Quad-Core @ 1.5GHz)`}</div>
     <div class="bar-container">
-      <div class="bar" style="width: {cpuLoad / 100}%; background-color: {getColor(cpuLoad)};">
+      <div class="bar" style="width: {cpuLoad}%; background-color: {getColor(cpuLoad)};">
         {cpuLoad}%
       </div>
     </div>
