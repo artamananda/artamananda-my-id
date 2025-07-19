@@ -1,5 +1,6 @@
 <script>
   import { onMount, onDestroy } from 'svelte'
+  import { name } from '$lib/info.js'
 
   let cpuLoad = 0
   let memoryUsage = 0
@@ -38,6 +39,10 @@
     return '#f44336' // merah
   }
 </script>
+
+<svelte:head>
+  <title>{name} | Server Monitoring</title>
+</svelte:head>
 
 <div class="info-box">
   <h1 class="text-2xl font-bold mb-2">{`Arta's Server Monitoring 🖥️ `}</h1>
