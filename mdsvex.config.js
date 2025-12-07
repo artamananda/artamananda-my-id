@@ -31,14 +31,14 @@ function videos() {
       if (extensions.some((ext) => node.url.endsWith(ext))) {
         node.type = 'html'
         node.value = `
-            <video 
+            <video
               src="${node.url}"
               autoplay
               muted
               playsinline
               loop
               title="${node.alt}"
-            />
+            ></video>
           `
       }
     })
