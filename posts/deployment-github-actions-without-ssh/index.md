@@ -1,8 +1,6 @@
 ---
 title: Deploying to Your Home Server from GitHub Actions Without SSH
 date: 2025-12-07
-author: Your Name
-tags: [deployment, github-actions, home-server, devops, cloudflare]
 ---
 
 In my [previous post](https://artamananda.my.id/post/how-i-run-my-own-server-without-cloud-or-static-ip/), I shared how I run my own server using an Android TV box with Armbian and Cloudflare Zero Trust. While this setup works great for serving applications to the internet, I quickly ran into another challenge: **how do I deploy updates from GitHub Actions?**
