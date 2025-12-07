@@ -4,6 +4,11 @@
 
 <svelte:head>
   <title>404 - Page Not Found</title>
+  <script
+    async
+    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4860979088998905"
+    crossorigin="anonymous"
+  ></script>
 </svelte:head>
 
 <div class="not-found-container">

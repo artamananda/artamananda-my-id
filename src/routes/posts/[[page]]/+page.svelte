@@ -13,6 +13,11 @@
 
 <svelte:head>
   <title>{name} | Posts</title>
+  <script
+    async
+    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4860979088998905"
+    crossorigin="anonymous"
+  ></script>
 </svelte:head>
 
 <div class="flex flex-col flex-grow">

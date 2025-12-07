@@ -52,6 +52,11 @@
   <meta name="twitter:title" content={data.post.title} />
   <meta name="twitter:description" content={data.post.preview.text} />
   <meta name="twitter:image" content={ogImage} />
+  <script
+    async
+    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4860979088998905"
+    crossorigin="anonymous"
+  ></script>
 </svelte:head>
 
 <div class="root max-w-2xl mx-auto lg:max-w-none">
@@ -84,7 +89,7 @@
       </header>
 
       <!-- render the post -->
-      <div class="prose dark:prose-invert ">
+      <div class="prose dark:prose-invert">
         <svelte:component this={data.component} />
       </div>
     </article>
