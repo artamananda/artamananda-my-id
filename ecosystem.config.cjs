@@ -5,7 +5,7 @@ module.exports = {
       script: 'node',
       args: 'build/index.js',
       watch: false,
-      exp_backoff_restart_delay: 100,
+      exp_backoff_restart_delay: 100
     }
   ]
 }
