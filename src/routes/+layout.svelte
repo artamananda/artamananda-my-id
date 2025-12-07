@@ -76,7 +76,6 @@
           Indihome & Armbian ❤️
         </a>
       </div>
-      <footer />
     </footer>
   </div>
 </div>
