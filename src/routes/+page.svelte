@@ -11,6 +11,8 @@
 <svelte:head>
   <title>{name}</title>
   <meta name="description" content={bio} />
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4860979088998905"
+     crossorigin="anonymous"></script>
 </svelte:head>
 
 <div class="flex flex-col flex-grow gap-8 pb-16">
