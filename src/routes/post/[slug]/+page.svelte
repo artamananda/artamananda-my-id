@@ -15,7 +15,7 @@
     data.post.title
   )}**?theme=light&md=1&fontSize=100px&images=https%3A%2F%2Fassets.vercel.com%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fhyper-color-logo.svg`
 
-  const url = `${website}/${data.post.slug}`
+  const url = `${website}/post/${data.post.slug}`
 
   // if we came from /posts, we will use history to go back to preserve
   // posts pagination
@@ -44,6 +44,8 @@
   <meta property="og:title" content={data.post.title} />
   <meta property="og:description" content={data.post.preview.text} />
   <meta property="og:image" content={ogImage} />
+
+  <link rel="canonical" href={url} />
 
   <!-- Twitter Meta Tags -->
   <meta name="twitter:card" content="summary_large_image" />
