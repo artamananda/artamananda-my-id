@@ -4,6 +4,7 @@
   import { MoonIcon, SunIcon } from 'heroicons-svelte/24/solid'
   import { browser } from '$app/environment'
   import { name } from '$lib/info'
+  import LanguageSwitcher from '$lib/components/LanguageSwitcher.svelte'
   import { page } from '$app/stores'
 
   let isDarkMode = browser ? Boolean(document.documentElement.classList.contains('dark')) : true
@@ -36,28 +37,31 @@
         </div>
       </a>
 
-      <button
-        type="button"
-        role="switch"
-        aria-label="Toggle Dark Mode"
-        aria-checked={isDarkMode}
-        class="w-5 h-5 sm:h-8 sm:w-8 sm:p-1"
-        on:click={() => {
-          isDarkMode = !isDarkMode
-          localStorage.setItem('isDarkMode', isDarkMode.toString())
+      <div class="flex items-center gap-2 sm:gap-3">
+        <LanguageSwitcher />
+        <button
+          type="button"
+          role="switch"
+          aria-label="Toggle Dark Mode"
+          aria-checked={isDarkMode}
+          class="w-5 h-5 sm:h-8 sm:w-8 sm:p-1"
+          on:click={() => {
+            isDarkMode = !isDarkMode
+            localStorage.setItem('isDarkMode', isDarkMode.toString())
 
-          disableTransitionsTemporarily()
+            disableTransitionsTemporarily()
 
-          if (isDarkMode) {
-            document.querySelector('html').classList.add('dark')
-          } else {
-            document.querySelector('html').classList.remove('dark')
-          }
-        }}
-      >
-        <MoonIcon class="hidden text-zinc-500 dark:block" />
-        <SunIcon class="block text-zinc-400 dark:hidden" />
-      </button>
+            if (isDarkMode) {
+              document.querySelector('html').classList.add('dark')
+            } else {
+              document.querySelector('html').classList.remove('dark')
+            }
+          }}
+        >
+          <MoonIcon class="hidden text-zinc-500 dark:block" />
+          <SunIcon class="block text-zinc-400 dark:hidden" />
+        </button>
+      </div>
     </header>
     <main
       class="flex flex-col flex-grow w-full mx-auto"
