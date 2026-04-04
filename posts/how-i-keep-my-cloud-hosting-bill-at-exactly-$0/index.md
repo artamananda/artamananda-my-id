@@ -105,7 +105,11 @@ As for **video content**, I don't store that myself at all — I embed YouTube l
 
 ## Domain + Cloudflare: The Only Real Expense
 
-The one thing I do pay for is the domain name — and even that is minimal, around **$2–3 per year**. Once acquired, I point it to **[Cloudflare](https://cloudflare.com)**, which gives me a suite of genuinely useful free features:
+The one thing I do pay for is the domain name — and even that is minimal, around **$2–3 per year**. Technically, both Vercel and Fly.io already provide default domains out of the box — something like `yourapp.vercel.app` or `yourapp.fly.dev`. So yes, you could run everything for completely free without buying a domain at all.
+
+But here's the thing: I'm building a product, not a demo. Having a proper domain like `terasbelajarasik.web.id` makes the platform feel credible and trustworthy to users. It's the difference between handing someone a business card and handing them a sticky note. For $2–3 a year, custom branding is probably the easiest ROI decision in this entire setup.
+
+Once acquired, I point it to **[Cloudflare](https://cloudflare.com)**, which gives me a suite of genuinely useful free features:
 
 - **Global CDN** — static content cached on servers around the world, reducing latency regardless of where users are
 - **Free SSL/TLS** — automatic HTTPS with zero certificate management overhead
