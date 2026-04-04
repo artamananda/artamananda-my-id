@@ -1,6 +1,6 @@
 ---
 title: How I Keep My Cloud Hosting Bill at Exactly $0
-date: 2025-04-04
+date: 2026-04-04
 ---
 
 Running a learning platform like [terasbelajarasik.web.id](https://terasbelajarasik.web.id) comes with an interesting challenge: it's a _free_ learning platform, which means the hosting costs should ideally be free too. And somehow, I've managed to pull that off — my monthly cloud bill is exactly $0, despite running three separate apps across multiple platforms.
