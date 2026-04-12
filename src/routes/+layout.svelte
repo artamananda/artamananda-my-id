@@ -69,6 +69,36 @@
     >
       <slot />
     </main>
+    <section class="w-full max-w-2xl mx-auto overflow-x-auto py-4">
+      <div class="min-w-[728px]">
+        <script>
+          atOptions = {
+            'key' : 'c1edeec1394dd5fc423c1acca7bcf821',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+          };
+        </script>
+        <script src="https://www.highperformanceformat.com/c1edeec1394dd5fc423c1acca7bcf821/invoke.js"></script>
+        <script
+          async="async"
+          data-cfasync="false"
+          src="https://pl29130737.profitablecpmratenetwork.com/43cfc0ee17e03bd04b7165471b9695e9/invoke.js"
+        ></script>
+        <div id="container-43cfc0ee17e03bd04b7165471b9695e9"></div>
+        <script src="https://pl29130736.profitablecpmratenetwork.com/b8/fe/47/b8fe47b89ba02b87f947bfa1b7a19556.js"></script>
+        <a
+            href="https://www.profitablecpmratenetwork.com/a2qf1g4z?key=cad550e67a4e80eb00db48b9328bc14f"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-xs text-teal-500 dark:text-teal-400 hover:underline"
+          >
+            Visit link
+          </a>
+        <script src="https://pl29130738.profitablecpmratenetwork.com/65/77/90/65779097e6eedffaa768cc7398a9e543.js"></script>
+      </div>
+    </section>
     <footer>
       <div class="text-center w-full max-w-2xl py-4 mx-auto text-xs text-zinc-500">
         <span
