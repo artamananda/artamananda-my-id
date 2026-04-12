@@ -71,18 +71,7 @@
     </main>
     <section class="w-full max-w-2xl mx-auto overflow-x-auto py-4">
       <div class="min-w-[728px]">
-      <!-- <script>
-        atOptions = {
-          'key' : 'f5528be89912f3c16e8a5cd7432c1961',
-          'format' : 'iframe',
-          'height' : 90,
-          'width' : 728,
-          'params' : {}
-        };
-      </script>
-      <script src="https://www.highperformanceformat.com/f5528be89912f3c16e8a5cd7432c1961/invoke.js"></script> -->
-
-        <script>
+        <!-- <script>
           atOptions = {
             'key' : 'c1edeec1394dd5fc423c1acca7bcf821',
             'format' : 'iframe',
@@ -91,13 +80,13 @@
             'params' : {}
           };
         </script>
-        <script src="https://www.highperformanceformat.com/c1edeec1394dd5fc423c1acca7bcf821/invoke.js"></script>
-        <!-- <script
+        <script src="https://www.highperformanceformat.com/c1edeec1394dd5fc423c1acca7bcf821/invoke.js"></script> -->
+        <script
           async="async"
           data-cfasync="false"
           src="https://pl29130737.profitablecpmratenetwork.com/43cfc0ee17e03bd04b7165471b9695e9/invoke.js"
         ></script>
-        <div id="container-43cfc0ee17e03bd04b7165471b9695e9"></div> -->
+        <div id="container-43cfc0ee17e03bd04b7165471b9695e9"></div>
         <!-- <script src="https://pl29130736.profitablecpmratenetwork.com/b8/fe/47/b8fe47b89ba02b87f947bfa1b7a19556.js"></script> -->
         <!-- <a
             href="https://www.profitablecpmratenetwork.com/a2qf1g4z?key=cad550e67a4e80eb00db48b9328bc14f"
