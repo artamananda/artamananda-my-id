@@ -5,6 +5,8 @@
   let cpuLoad = 0
   let memoryUsage = 0
   let cpuTemp = 0
+  let swapUsage = null
+  let diskUsage = null
 
   let interval
 
@@ -17,6 +19,10 @@
         cpuLoad = parseInt(json.payload.cpu_load)
         memoryUsage = parseInt(json.payload.memory_usage)
         cpuTemp = parseInt(json.payload.cpu_temperature.split('°')[0])
+        const swap = parseInt(json.payload.swap_usage)
+        const disk = parseInt(json.payload.disk_usage)
+        swapUsage = Number.isNaN(swap) ? null : swap
+        diskUsage = Number.isNaN(disk) ? null : disk
       }
     } catch (error) {
       console.error('Gagal fetch data:', error)
@@ -66,6 +72,28 @@
       </div>
     </div>
   </div>
+
+  {#if swapUsage !== null}
+    <div class="info-box-item">
+      <div class="label">{`Swap Usage: ${swapUsage}%`}</div>
+      <div class="bar-container">
+        <div class="bar" style="width: {swapUsage}%; background-color: {getColor(swapUsage)};">
+          {swapUsage}%
+        </div>
+      </div>
+    </div>
+  {/if}
+
+  {#if diskUsage !== null}
+    <div class="info-box-item">
+      <div class="label">{`Disk Usage: ${diskUsage}%`}</div>
+      <div class="bar-container">
+        <div class="bar" style="width: {diskUsage}%; background-color: {getColor(diskUsage)};">
+          {diskUsage}%
+        </div>
+      </div>
+    </div>
+  {/if}
 
   <div class="info-box-item">
     <div class="label">CPU Temperature: {cpuTemp + '°C'}</div>
